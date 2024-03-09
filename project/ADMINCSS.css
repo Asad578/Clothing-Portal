@@ -1,0 +1,528 @@
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition:all .2s linear;
+}
+
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   color: white;
+   background-color: black;
+}
+
+section{
+   padding:3rem 2rem;
+}
+
+
+.title{
+   text-align: center;
+   margin-bottom: 2rem;
+   color: #f9004d;
+   font-size: 4rem;
+}
+
+
+.empty{
+   padding:1.5rem;
+   text-align: center;
+   border: .1rem solid #f9004d;
+   background-color: white;
+   color: orange;
+   font-size: 2.4rem;
+}
+
+
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:1rem 3rem;
+   cursor: pointer;
+   color: white;
+   font-size: 1.8rem;
+   border-radius: .5rem;
+   text-transform: capitalize;
+}
+
+.white-btn,
+.btn{
+   background-color: #f9004d;
+}
+
+.option-btn{
+   background-color: orange;
+}
+
+.delete-btn{
+   background-color: mediumvioletred;
+}
+
+.btn:hover,
+.white-btn:hover,
+.delete-btn:hover{
+   background-color: white;
+   color: #f9004d;
+   border: .2rem solid #f9004d;
+
+}
+
+.option-btn:hover{
+   color: orange;
+   background-color: white;
+   border: .2rem solid orange;
+
+}
+
+
+
+
+
+.header{
+   position: sticky;
+   top:0; left:0; right:0;
+   z-index: 1000;
+   background-color: black;
+   border: .1rem solid #f9004d;
+}
+
+.header .flex{
+   display: flex;
+   align-items: center;
+   padding:2rem;
+   justify-content: space-between;
+   position: relative;
+   max-width: 1200px;
+   margin:0 auto;
+}
+ 
+.header .flex .logo{
+   font-size: 2.5rem;
+   color: #f9004d;
+}
+
+.header .flex .logo span{
+   color: white;
+}
+
+.header .flex .navbar a{
+   margin:0 1rem;
+   font-size: 2rem;
+   color: white;
+}
+
+.header .flex .navbar a:hover{
+   color: #f9004d;
+}
+
+.header .flex .icons div{
+   margin-left: 1.5rem;
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: white;
+}
+
+.header .flex .icons div:hover{
+   color: #f9004d;
+}
+
+.header .flex .account-box{
+   position: absolute;
+   top:120%;
+   right: .1rem;
+   width: 30rem;
+   border-radius: .5rem;
+   padding:2rem;
+   border: .1rem solid #f9004d;
+   background-color: white;
+   display: none;
+   animation:fadeIn .2s linear;
+}
+
+.header .flex .account-box.active{
+   display: inline-block;
+}
+
+.header .flex .account-box p{
+   font-size: 2rem;
+   color: black;
+   margin-bottom: 1.5rem;
+}
+
+.header .flex .account-box p span{
+   color: #f9004d;
+   font-size: 1.7rem;
+}
+
+.header .flex .account-box .delete-btn{
+   margin-top: 0;
+}
+
+.header .flex .account-box div{
+   margin-top: 1.5rem;
+   font-size: 2rem;
+   color: gray;
+}
+
+.header .flex .account-box div a{
+   color: orange;
+}
+
+.header .flex .account-box div a:hover{
+   text-decoration: underline;
+}
+
+#menu-btn{
+   display: none;
+}
+
+
+
+
+
+
+.dashboard .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.dashboard .box-container .box{
+   border-radius: .5rem;
+   padding:2rem;
+   background-color: white;
+   border: .2rem solid #f9004d;
+   text-align: center;
+}
+
+.dashboard .box-container .box h3{
+   font-size: 5rem;
+   color: white;
+   background-color: black; 
+   margin-top: 1rem;
+   padding:1.5rem;
+   border-radius: .5rem;
+}
+
+.dashboard .box-container .box p{
+   color: white;
+   background-color: #f9004d;
+   margin-top: 1rem;
+   padding: 1.5rem;
+   font-size: 2rem;
+
+}
+
+
+
+
+
+
+
+.add-products form{
+   background-color: white;
+   border-radius: .5rem;
+   padding:2rem;
+   text-align: center;
+   border: .2rem solid #f9004d;
+   max-width: 50rem;
+   margin:0 auto;
+}
+
+.add-products form h3{
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   color: #f9004d;
+   margin-bottom: 1.5rem;
+}
+
+.add-products form .box{
+   width: 100%;
+   background-color: black;
+   border-radius: .5rem;
+   margin:1rem 0;
+   padding:1.2rem 1.4rem;
+   color: white;
+   font-size: 1.8rem;
+   border: .1rem solid #f9004d;
+}
+
+.show-products .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.show-products{
+   padding-top: 0;
+}
+
+.show-products .box-container .box{
+   text-align: center;
+   padding:2rem;
+   border-radius: .5rem;
+   border: .2rem solid #f9004d;
+   background-color: white;
+}
+
+.show-products .box-container .box img{
+   height: 30rem;
+   width: 25rem;
+   border: .2rem solid black;
+}
+
+.show-products .box-container .box .name{
+   padding:1rem 0;
+   font-size: 2.2rem;
+   color: #f9004d;
+}
+
+.show-products .box-container .box .price{
+   padding:1rem 0;
+   font-size: 2.5rem;
+   color: darkred;
+}
+
+.edit-product-form{
+   background-color: transparent;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:2rem;
+   overflow-y: scroll;
+   position: fixed;
+   top:0; 
+   z-index: 1200;
+   width: 100%;
+}
+
+.edit-product-form form{
+   width: 50rem;
+   padding:2rem;
+   text-align: center;
+   border-radius: .5rem;
+   background-color: white;
+   border: .2rem solid #f9004d;
+}
+
+.edit-product-form form img{
+   height: 25rem;
+   margin-bottom: 1rem;
+   border: .2rem solid black;
+}
+
+.edit-product-form form .box{
+   margin:1rem 0;
+   padding:1.2rem 1.4rem;
+   border: .1rem solid #f9004d;
+   border-radius: .5rem;
+   background-color: black;
+   font-size: 1.8rem;
+   color: white;
+   width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.orders .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.orders .box-container .box{
+   background-color: gray;
+   padding:2rem;
+   border: .1rem solid #f9004d;
+   border-radius: .5rem;
+}
+
+.orders .box-container .box p{
+   padding-bottom: 1rem;
+   font-size: 2rem;
+   color: black;
+}
+
+.orders .box-container .box p span{
+   color: white;
+}
+
+.orders .box-container .box form{
+   text-align: center;
+}
+
+.orders .box-container .box form select{
+   border-radius: .5rem;
+   margin:.5rem 0;
+   width: 100%;
+   background-color: black;
+   border: .1rem solid #f9004d;
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color: white;
+}
+
+
+
+
+
+
+
+
+.users .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.users .box-container .box{
+   background-color: white;
+   padding:2rem;
+   border: .2rem solid #f9004d;
+   border-radius: .5rem;
+}
+
+.users .box-container .box p{
+   padding-bottom: 1.5rem;
+   font-size: 2rem;
+   color: black;
+}
+
+.users .box-container .box p span{
+   color: #f9004d;
+   font-size: 1.7rem;
+}
+
+.users .box-container .box .delete-btn{
+   margin-top: 0;
+}
+
+
+
+
+
+
+
+.messages .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.messages .box-container .box{
+   background-color: white;
+   padding:2rem;
+   border: .2rem solid #f9004d;
+   border-radius: .5rem;
+}
+
+.messages .box-container .box p{
+   padding-bottom: 1.5rem;
+   font-size: 2rem;
+   color: black;
+   line-height: 1.5;
+}
+
+.messages .box-container .box p span{
+   color: #f9004d;
+   font-size: 1.7rem;
+}
+
+.messages .box-container .box .delete-btn{
+   margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .flex .navbar{
+      position: absolute;
+      top:99%; left:0; right:0;
+      background-color: black;
+      border: .2rem solid #f9004d;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .flex .navbar a{
+      margin:2rem;
+      display: block;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .title{
+      font-size: 3rem;
+   }
+
+}
